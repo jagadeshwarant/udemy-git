@@ -59,6 +59,10 @@ body {
 
 }
 
+.navbar__s4{
+    display: none;
+}
+
 /*My learning popup*/
 .Mylearning {
     position: relative;
@@ -95,10 +99,10 @@ body {
     border: solid #A435F0 1px;
 }
 
-.categories p:hover{
+.categories p:hover {
     transition: 1s;
     background-color: transparent;
-    color:black;
+    color: black;
     border: solid #A435F0 1px;
 }
 
@@ -124,7 +128,7 @@ body {
     animation-fill-mode: forwards;
 }
 
-@keyframes zoom{
+@keyframes zoom {
 
     0% {
         transform: scaleX(0);
@@ -151,7 +155,9 @@ body {
 }
 
 .course-card {
-    width: 250px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .course-card img {
@@ -211,4 +217,29 @@ body {
     align-items: center;
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width:800px){
+    body{
+        font-size:10px
+    }
+}
+
+@media screen and (max-width:600px){
+    .categories{
+      display:none;
+    }
+
+    .course-card{
+        flex-basis: 40%;
+
+    }
+
+    .navbar__s2,.navbar__s3{
+        display: none;
+    }
+
+    .navbar__s4{
+        display: block;
+    }
 }
